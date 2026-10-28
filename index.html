@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="theme-color" content="#07111f" />
+    <meta name="description" content="A live Indian Standard Time digital clock." />
+    <title>India Digital Clock — Live IST</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <main class="app-shell">
+      <header class="topbar">
+        <a class="brand" href="#main" aria-label="India Digital Clock home">
+          <span class="brand-mark" aria-hidden="true">
+            <svg viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <circle cx="24" cy="25" r="16.5" stroke="currentColor" stroke-width="2.5" />
+              <path d="M24 15v10l7 4M18 4h12M24 4v4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+              <circle cx="24" cy="25" r="2" fill="currentColor" />
+            </svg>
+          </span>
+          <span class="brand-copy">
+            <span class="brand-title">INDIA DIGITAL CLOCK</span>
+            <span class="brand-subtitle">Real-Time Indian Standard Time (IST)</span>
+          </span>
+        </a>
+        <div class="live-indicator"><span class="live-dot"></span><span>LIVE CLOCK</span></div>
+      </header>
+
+      <section class="clock-panel" id="main" aria-labelledby="clock-heading">
+        <div class="panel-topline">
+          <div>
+            <p class="eyebrow">YOUR LOCAL MOMENT IN INDIA</p>
+            <h1 id="clock-heading">Time, in real time.</h1>
+          </div>
+          <div class="timezone-pill"><span class="pin-icon" aria-hidden="true">⌖</span> INDIA <span class="pill-divider">·</span> IST</div>
+        </div>
+
+        <div class="time-stage" aria-label="Current time in India">
+          <div class="time-readout" aria-live="off">
+            <span class="time-digit" id="hours">--</span><span class="time-colon">:</span><span class="time-digit" id="minutes">--</span>
+            <span class="period" id="period">--</span>
+          </div>
+          <div class="seconds-line"><span class="seconds-label">SECONDS</span><span class="seconds-value" id="seconds">--</span><span class="seconds-track"><span class="seconds-progress" id="seconds-progress"></span></span></div>
+        </div>
+
+        <div class="timezone-note"><span class="timezone-icon" aria-hidden="true">◷</span><span>Indian Standard Time</span><span class="note-separator">/</span><span class="utc-offset">UTC+05:30</span></div>
+
+        <div class="info-grid" aria-label="Calendar details">
+          <article class="info-card day-card">
+            <div class="card-heading"><span class="card-icon" aria-hidden="true">◫</span><span class="card-label">TODAY</span></div>
+            <div class="card-value" id="day">Loading</div>
+            <div class="card-caption" id="date">—</div>
+          </article>
+          <article class="info-card week-card">
+            <div class="card-heading"><span class="card-icon" aria-hidden="true">▦</span><span class="card-label">ISO WEEK</span></div>
+            <div class="week-value"><span class="card-value" id="week">—</span><span class="week-suffix">/ 53</span></div>
+            <div class="card-caption">Week of the year</div>
+          </article>
+        </div>
+      </section>
+
+      <footer class="page-footer"><span>ALWAYS ON IST</span><span class="footer-center"><span class="footer-dot"></span> Syncing with your device clock</span><span>UTC +05:30</span></footer>
+    </main>
+  </body>
+</html>
